@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Bootstrap & CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/b27b4df281.js" crossorigin="anonymous"></script>
+
+
+  <title>Rock, Paper, Scissors</title>
+
+</head>
+
+<body>
+  <div class="frame container">
+
+    <div class="top d-flex mx-auto justify-content-between">
+
+      <img class="img-fluid" src="images/logo.svg" alt="Rock Scissors Paper">
+      <div class="score-box">
+        <p>SCORE</p>
+        <div class="score">
+          0
+        </div>
+      </div>
+
+    </div>
+
+    <div class="triangle gameUI">
+      <img src="images/bg-triangle.svg" alt="triangle" class="triangle-test">
+      <span class="rock weapon" name="rock">
+        <i class="far fa-circle border-circle shadow-outer border-red"></i>
+        <i class="fas fa-circle bkgd-circle"></i>
+        <i class="far fa-circle border-circle shadow-inner border-red"></i>
+        <img src="images/icon-rock.svg" alt="rock" class="icon rock-icon">
+      </span>
+      <span class="paper weapon" name="paper">
+        <i class="far fa-circle border-circle shadow-outer border-blue"></i>
+        <i class="fas fa-circle bkgd-circle"></i>
+        <i class="far fa-circle border-circle shadow-inner border-blue"></i>
+        <img src="images/icon-paper.svg" alt="paper" class="icon">
+      </span>
+      <span class="scissors weapon" name="scissors">
+        <i class="far fa-circle border-circle shadow-outer border-yellow"></i>
+        <i class="fas fa-circle bkgd-circle"></i>
+        <i class="far fa-circle border-circle shadow-inner border-yellow"></i>
+        <img src="images/icon-scissors.svg" alt="scissors" class="icon">
+      </span>
+    </div>
+
+      <div class="gameUI2 row h-75 mt-2 hidden">
+
+      <div class="col-4 text-center d-flex flex-column justify-content-center">
+        <p>YOU PICKED</p>
+        <div class="rock game2-adjust rock2 hidden" name="rock">
+          <i class="far fa-circle border-circle shadow-outer border-red"></i>
+          <i class="fas fa-circle bkgd-circle"></i>
+          <i class="far fa-circle border-circle shadow-inner border-red"></i>
+          <img src="images/icon-rock.svg" alt="rock" class="icon rock-icon">
+        </div>
+        <div class="paper paper2 hidden" name="paper">
+          <i class="far fa-circle border-circle shadow-outer border-blue"></i>
+          <i class="fas fa-circle bkgd-circle"></i>
+          <i class="far fa-circle border-circle shadow-inner border-blue"></i>
+          <img src="images/icon-paper.svg" alt="paper" class="icon">
+        </div>
+        <div class=" game2-adjust scissors2 hidden" name="scissors">
+          <i class="far fa-circle border-circle shadow-outer border-yellow"></i>
+          <i class="fas fa-circle bkgd-circle"></i>
+          <i class="far fa-circle border-circle shadow-inner border-yellow"></i>
+          <img src="images/icon-scissors.svg" alt="scissors" class="icon">
+        </div>
+      </div>
+
+      <div class="col-4 text-center d-flex flex-column justify-content-space win-loose-col">
+        <p class="win-loose" style="font-size:4rem">YOU WIN</p>
+        <button type="button" name="button" class="play-again-btn">PLAY AGAIN</button>
+      </div>
+
+      <div class="col-4 text-center d-flex flex-column justify-content-center">
+        <p>THE HOUSE PICKED</p>
+        <i class="fas fa-circle emtpy-circle hidden"></i>
+        <div class="rock game2-adjust rock3 hidden" name="rock">
+          <i class="far fa-circle border-circle shadow-outer border-red"></i>
+          <i class="fas fa-circle bkgd-circle"></i>
+          <i class="far fa-circle border-circle shadow-inner border-red"></i>
+          <img src="images/icon-rock.svg" alt="rock" class="icon rock-icon">
+        </div>
+        <div class="paper paper3 hidden" name="paper">
+          <i class="far fa-circle border-circle shadow-outer border-blue"></i>
+          <i class="fas fa-circle bkgd-circle"></i>
+          <i class="far fa-circle border-circle shadow-inner border-blue"></i>
+          <img src="images/icon-paper.svg" alt="paper" class="icon">
+        </div>
+        <div class=" game2-adjust scissors3 hidden" name="scissors">
+          <i class="far fa-circle border-circle shadow-outer border-yellow"></i>
+          <i class="fas fa-circle bkgd-circle"></i>
+          <i class="far fa-circle border-circle shadow-inner border-yellow"></i>
+          <img src="images/icon-scissors.svg" alt="scissors" class="icon">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hidden" id="dim"></div>
+
+    <div class="rules-panel text-center hidden" id="rules-panel">
+      <p>RULES</p>
+      <img class="close-icon" src="images/icon-close.svg" alt="X" id=close-panel>
+      <img src="images/image-rules.svg" alt="Rules">
+    </div>
+
+    <button class="rules" type="button" name="button-rules" id="rules-open">RULES</button>
+
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

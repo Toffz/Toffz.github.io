@@ -1,0 +1,246 @@
+html, body {
+  height: 100vh;
+  color: white;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background: radial-gradient(ellipse at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+.frame {
+  height: 100%;
+  width: 80%;
+  background-repeat: no-repeat;
+  padding: 1rem;
+}
+
+.top {
+  padding: 1rem;
+  border: hsl(217, 16%, 45%) 3px solid;
+  border-radius: 15px;
+}
+
+.game {}
+
+.score-box {
+  width: 20%;
+  border-radius: 15px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  position: relative;
+}
+
+.score-box p {
+  color: hsl(229, 64%, 46%);
+  margin: 0;
+  font-weight: 600;
+  position: relative;
+  top: 14%;
+}
+
+.score-box .score {
+  font-size: 4rem;
+  font-weight: 700;
+  color: hsl(229, 25%, 31%);
+}
+
+/* RULES BUTTON */
+.rules {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  width: 15%;
+  background: none;
+  border-radius: 10px;
+  border: solid 2px hsl(217, 16%, 45%);
+  color: white;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.rules:hover {
+  background-color: white;
+  color: hsl(237, 49%, 15%);
+  border: none;
+}
+
+/* GAME UI */
+.triangle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 45%;
+}
+
+.rock {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(-50%, -50%);
+}
+
+.paper {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transform: translate(50%, -50%);
+}
+
+.scissors {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.bkgd-circle {
+  font-size: 150px;
+  position: absolute;
+  transform: translate(-25%, -25%);
+}
+
+.border-circle {
+  position: absolute;
+  font-size: 170px;
+  transform: translate(-30%, -30%);
+}
+
+.rock:hover, .paper:hover, .scissors:hover {
+  text-shadow: 0px 0px 70px hsl(100, 100%, 100%, 0.8);
+}
+
+.border-red {
+  color: #F41137;
+}
+
+.border-blue {
+  color: #416EEA;
+}
+
+.border-yellow {
+  color: #FFCA1C;
+}
+
+.icon {
+  position: relative;
+  width: 60px;
+  height: auto;
+}
+
+.rock-icon {}
+
+.shadow-inner {
+  text-shadow: 1px 7px 1px hsl(0, 0%, 0%, 0.2);
+}
+
+.shadow-outer {
+  position: absolute;
+  top: 7px;
+  left: 1px;
+}
+
+/* RULES PANEL */
+.rules-panel {
+  position: absolute;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rules-panel p {
+  color: hsl(229, 25%, 31%);
+  text-align: left;
+  font-weight: 700;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.close-icon {
+  position: absolute;
+  top: 45px;
+  right: 30px;
+}
+
+.close-icon:hover {
+  filter: brightness(0);
+}
+
+/* VISIBILITY Utilities */
+.shown {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#dim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.game2-adjust {
+  left: 50%;
+  top: 50%;
+}
+
+.gameUI2 div p {
+  position: relative;
+  bottom: 150px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+
+.paper2 {
+top:50%;
+right: 50%;
+}
+
+.scissors2 {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.paper3 {
+top:50%;
+right: 50%;
+}
+
+.scissors3 {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.emtpy-circle {
+  font-size: 150px;
+  position: absolute;
+  left: 27%;
+  top: 36%;
+  color: hsl(237, 49%, 15%);
+}
+
+.win-loose {
+  position: relative;
+  top: 60%;
+}
+
+.play-again-btn {
+  width: 70%;
+  height: 40px;
+  font-weight: 600;
+  align-self: center;
+  border-radius: 10px;
+  border-style: none;
+  color: red;
+}
